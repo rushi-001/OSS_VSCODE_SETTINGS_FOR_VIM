@@ -73,7 +73,7 @@ With these settings, VS Code behaves much closer to **Vim/Neovim** by adding:
 }
 ```
 
-## 📌 `keybindings.json`
+## 📌 `keybindings.json(Open Keyboard Shortcuts JSON)`
 ```jsonc
 [
     // Vim-style pane navigation inside VS Code
