@@ -15,7 +15,7 @@ With these settings, VS Code behaves much closer to **Vim/Neovim** by adding:
 
 ```jsonc
 {
-    // --- Vim keymapping ---
+    // --- Vim keymapping (Extention: VIM / vscodevim.vim) ---
     
     // Exit insert mode by typing "JJ"
     "vim.insertModeKeyBindings": [
@@ -76,7 +76,7 @@ With these settings, VS Code behaves much closer to **Vim/Neovim** by adding:
 ## 📌 `keybindings.json(Open Keyboard Shortcuts JSON)`
 ```jsonc
 [
-    // ---Vim-style pane navigation inside VS Code---
+    // --- Vim-style pane navigation inside VS Code (Extention: VIM / vscodevim.vim) ---
     {
         "key": "ctrl+h",
         "command": "workbench.action.navigateLeft"
@@ -93,7 +93,7 @@ With these settings, VS Code behaves much closer to **Vim/Neovim** by adding:
         "key": "ctrl+l",
         "command": "workbench.action.navigateRight"
     },
-    // ---Jump to Hint Keybindings---
+    // --- Jump to Hint Keybindings (Extention: Jump to Hint / shuworks.vscode-jump-to-hint) ---
     {
       "key": "shift+enter",
       "command": "jumpToHint.jumpByWord",
