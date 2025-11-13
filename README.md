@@ -25,14 +25,6 @@ With these settings, VS Code behaves much closer to **Vim/Neovim** by adding:
         }
     ],
 
-    // Exit visual mode by typing "JJ"
-    "vim.visualModeKeyBindings": [
-        {
-            "before": ["J", "J"],
-            "after": ["<Esc>"]
-        }
-    ],
-
     // Define leader key (spacebar)
     "vim.leader": "<space>",
 
