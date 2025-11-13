@@ -17,10 +17,10 @@ With these settings, VS Code behaves much closer to **Vim/Neovim** by adding:
 {
     // --- Vim keymapping (Extention: VIM / vscodevim.vim) ---
     
-    // Exit insert mode by typing "JJ"
+    // Exit insert mode by typing ";;"
     "vim.insertModeKeyBindings": [
         {
-            "before": ["J", "J"],
+            "before": [";", ";"],
             "after": ["<Esc>"]
         }
     ],
