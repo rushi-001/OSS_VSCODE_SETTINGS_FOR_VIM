@@ -16,19 +16,16 @@ With these settings, VS Code behaves much closer to **Vim/Neovim** by adding:
 ```jsonc
 {
     // --- Vim keymapping (Extention: VIM / vscodevim.vim) ---
-    
-    // Exit insert mode by typing ";;"
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [";", ";"],
-            "after": ["<Esc>"]
-        }
-    ],
 
-    // Define leader key (spacebar)
+    // ___ Define leader key (spacebar) ___
     "vim.leader": "<space>",
 
-    // Normal mode leader keybindings
+    // ___ Let VS Code handle these keys (so they don't get blocked by Vim extension) ___
+    "vim.handleKeys": {
+        "<C-p>": false
+    },
+
+    // ___ Normal mode keybindings ___
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             // <leader> + y → Copy to clipboard
@@ -42,8 +39,22 @@ With these settings, VS Code behaves much closer to **Vim/Neovim** by adding:
         }
     ],
 
-    // Visual mode leader keybindings
+    // ___ Insert mode keybindings ___
+    "vim.insertModeKeyBindings": [
+        {
+            // KK to exit insert mode
+            "before": ["K", "K"],
+            "after": ["<Esc>"]
+        }
+    ],
+
+    // ___ Visual mode keybindings ___
     "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            // KK to exit visual mode
+            "before": ["K", "K"],
+            "after": ["<Esc>"]
+        },
         {
             // <leader> + y → Copy selection to clipboard
             "before": ["<leader>", "y"],
@@ -55,11 +66,6 @@ With these settings, VS Code behaves much closer to **Vim/Neovim** by adding:
             "commands": ["workbench.action.toggleSidebarVisibility"]
         }
     ],
-
-    // Let VS Code handle these keys (so they don't get blocked by Vim extension)
-    "vim.handleKeys": {
-        "<C-p>": false // Restore Ctrl+P (Quick Open)
-    }
 
     // --- End Vim keymapping ---
 }
